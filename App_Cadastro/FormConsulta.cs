@@ -11,14 +11,18 @@ namespace App_Cadastro
 {
     public partial class FormConsulta : Form
     {
+        private string connectionString = "User=SYSDBA;Password=helenin;Database=C:\\Bancos\\produtos.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=UTF8;";
+
         public FormConsulta()
         {
             InitializeComponent();
+            Carregarprodutos();
 
         }
 
         private void Carregarprodutos()
         {
+
             flpProdutos.Controls.Clear();
             using (FbConnection conn = new FbConnection(connectionString))
             {
@@ -44,27 +48,43 @@ namespace App_Cadastro
                     }
                 }
 
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao carregar os produtos:" + ex.Message);
                 }
             }
         }
 
-        private Panel CriarCardProdutos(string codigo, string nome, string marca, decimal valor, int quantidade)
+        private Panel CriarCardProduto(string codigo, string nome, string marca, decimal valor, int quantidade)
         {
             Panel card = new Panel
             {
-                Width = 350,
-                Height = 80,
+                Width = flpProdutos.Size.Width - 40,
+                Height = 100,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(5)
             };
 
             Label lbl = new Label
             {
-                Text = $"Código: {codigo} | Nome: {nome} | Marca: {marca} | Valor: {valor} | Quantidade: {quantidade} |"
-            }
+                Text = $"Código: {codigo} | Nome: {nome.ToUpper()} | Marca: {marca.ToUpper()} | Valor: {valor} | Quantidade: {quantidade} |",
+                AutoSize = false,
+                Dock = DockStyle.Fill,
+                TextAlign = ContentAlignment.MiddleLeft,
+                Padding = new Padding(8),
+                Font = new Font("Segoe UI", 16F, FontStyle.Regular),
+                ForeColor = Color.FromArgb(0, 0, 64)
+            };
+
+            card.Controls.Add(lbl);
+            return card;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 forminicial = new Form1();
+            forminicial.Show();
+            this.Hide();
         }
     }
 }

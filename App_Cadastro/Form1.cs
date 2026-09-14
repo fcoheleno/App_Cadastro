@@ -20,5 +20,22 @@ namespace App_Cadastro
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FormConsulta formConsulta = new FormConsulta();
+            formConsulta.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

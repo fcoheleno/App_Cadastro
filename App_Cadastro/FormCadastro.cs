@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace App_Cadastro
 {
-    
+
     public partial class FormCadastro : Form
     {
         private string connectionString = "User=SYSDBA;Password=helenin;Database=C:\\Bancos\\produtos.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=UTF8;";
@@ -34,11 +34,15 @@ namespace App_Cadastro
         private TextBox txtMarca;
         private Button button1;
         private Label label7;
+        private PictureBox pictureBox1;
         private TextBox txtNome;
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastro));
             panel1 = new Panel();
+            label7 = new Label();
+            button1 = new Button();
             BotaoVoltar = new Button();
             label1 = new Label();
             txtNome = new TextBox();
@@ -53,23 +57,52 @@ namespace App_Cadastro
             txtQuantidade = new TextBox();
             txtCodigo = new TextBox();
             txtValor = new TextBox();
-            button1 = new Button();
-            label7 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 0, 64);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(BotaoVoltar);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(468, 661);
+            panel1.Size = new Size(468, 707);
             panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.FlatStyle = FlatStyle.Flat;
+            label7.Font = new Font("MicrogrammaDBolExt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ButtonHighlight;
+            label7.Location = new Point(80, 118);
+            label7.Name = "label7";
+            label7.Size = new Size(281, 31);
+            label7.TabIndex = 11;
+            label7.Text = "Seção de cadastro";
+            label7.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.FromArgb(0, 0, 64);
+            button1.Location = new Point(143, 494);
+            button1.Name = "button1";
+            button1.Size = new Size(175, 60);
+            button1.TabIndex = 10;
+            button1.Text = "Consultar \r\nEstoque\r\n";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // BotaoVoltar
             // 
@@ -78,7 +111,7 @@ namespace App_Cadastro
             BotaoVoltar.FlatStyle = FlatStyle.Flat;
             BotaoVoltar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BotaoVoltar.ForeColor = Color.FromArgb(0, 0, 64);
-            BotaoVoltar.Location = new Point(146, 517);
+            BotaoVoltar.Location = new Point(143, 582);
             BotaoVoltar.Name = "BotaoVoltar";
             BotaoVoltar.Size = new Size(175, 62);
             BotaoVoltar.TabIndex = 2;
@@ -92,7 +125,7 @@ namespace App_Cadastro
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("MicrogrammaDBolExt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(0, 0, 64);
-            label1.Location = new Point(587, 46);
+            label1.Location = new Point(641, 68);
             label1.Name = "label1";
             label1.Size = new Size(232, 62);
             label1.TabIndex = 1;
@@ -103,11 +136,11 @@ namespace App_Cadastro
             // 
             txtNome.Cursor = Cursors.IBeam;
             txtNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNome.Location = new Point(553, 262);
+            txtNome.Location = new Point(607, 284);
             txtNome.Multiline = true;
             txtNome.Name = "txtNome";
             txtNome.PlaceholderText = "Digite aqui...";
-            txtNome.Size = new Size(310, 30);
+            txtNome.Size = new Size(310, 36);
             txtNome.TabIndex = 0;
             txtNome.TabStop = false;
             txtNome.TextChanged += EntradaNome_TextChanged;
@@ -129,7 +162,7 @@ namespace App_Cadastro
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(924, 661);
+            panel2.Size = new Size(1035, 707);
             panel2.TabIndex = 1;
             // 
             // label6
@@ -137,7 +170,7 @@ namespace App_Cadastro
             label6.AutoSize = true;
             label6.Font = new Font("MicrogrammaDBolExt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(0, 0, 64);
-            label6.Location = new Point(553, 322);
+            label6.Location = new Point(607, 344);
             label6.Name = "label6";
             label6.Size = new Size(221, 24);
             label6.TabIndex = 9;
@@ -147,11 +180,11 @@ namespace App_Cadastro
             // 
             txtMarca.Cursor = Cursors.IBeam;
             txtMarca.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtMarca.Location = new Point(553, 349);
+            txtMarca.Location = new Point(607, 371);
             txtMarca.Multiline = true;
             txtMarca.Name = "txtMarca";
             txtMarca.PlaceholderText = "Digite aqui...";
-            txtMarca.Size = new Size(310, 30);
+            txtMarca.Size = new Size(310, 36);
             txtMarca.TabIndex = 8;
             txtMarca.TabStop = false;
             txtMarca.TextChanged += MarcaProduto_TextChanged;
@@ -163,9 +196,9 @@ namespace App_Cadastro
             BtnCadastro.FlatStyle = FlatStyle.Flat;
             BtnCadastro.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnCadastro.ForeColor = Color.White;
-            BtnCadastro.Location = new Point(631, 569);
+            BtnCadastro.Location = new Point(680, 610);
             BtnCadastro.Name = "BtnCadastro";
-            BtnCadastro.Size = new Size(165, 47);
+            BtnCadastro.Size = new Size(165, 53);
             BtnCadastro.TabIndex = 3;
             BtnCadastro.Text = "Cadastrar";
             BtnCadastro.UseVisualStyleBackColor = false;
@@ -176,7 +209,7 @@ namespace App_Cadastro
             label5.AutoSize = true;
             label5.Font = new Font("MicrogrammaDBolExt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(0, 0, 64);
-            label5.Location = new Point(553, 490);
+            label5.Location = new Point(607, 512);
             label5.Name = "label5";
             label5.Size = new Size(278, 24);
             label5.TabIndex = 7;
@@ -187,7 +220,7 @@ namespace App_Cadastro
             label4.AutoSize = true;
             label4.Font = new Font("MicrogrammaDBolExt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(0, 0, 64);
-            label4.Location = new Point(553, 153);
+            label4.Location = new Point(607, 175);
             label4.Name = "label4";
             label4.Size = new Size(226, 24);
             label4.TabIndex = 6;
@@ -199,7 +232,7 @@ namespace App_Cadastro
             label3.AutoSize = true;
             label3.Font = new Font("MicrogrammaDBolExt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(0, 0, 64);
-            label3.Location = new Point(553, 406);
+            label3.Location = new Point(607, 428);
             label3.Name = "label3";
             label3.Size = new Size(209, 24);
             label3.TabIndex = 5;
@@ -210,7 +243,7 @@ namespace App_Cadastro
             label2.AutoSize = true;
             label2.Font = new Font("MicrogrammaDBolExt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(0, 0, 64);
-            label2.Location = new Point(553, 235);
+            label2.Location = new Point(607, 257);
             label2.Name = "label2";
             label2.Size = new Size(215, 24);
             label2.TabIndex = 4;
@@ -221,11 +254,11 @@ namespace App_Cadastro
             // 
             txtQuantidade.Cursor = Cursors.IBeam;
             txtQuantidade.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtQuantidade.Location = new Point(553, 517);
+            txtQuantidade.Location = new Point(607, 539);
             txtQuantidade.Multiline = true;
             txtQuantidade.Name = "txtQuantidade";
             txtQuantidade.PlaceholderText = "Digite aqui...";
-            txtQuantidade.Size = new Size(310, 30);
+            txtQuantidade.Size = new Size(310, 36);
             txtQuantidade.TabIndex = 3;
             txtQuantidade.TabStop = false;
             txtQuantidade.TextChanged += QuantidadeProduto_TextChanged;
@@ -234,11 +267,11 @@ namespace App_Cadastro
             // 
             txtCodigo.Cursor = Cursors.IBeam;
             txtCodigo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCodigo.Location = new Point(553, 180);
+            txtCodigo.Location = new Point(607, 202);
             txtCodigo.Multiline = true;
             txtCodigo.Name = "txtCodigo";
             txtCodigo.PlaceholderText = "Digite aqui...";
-            txtCodigo.Size = new Size(310, 30);
+            txtCodigo.Size = new Size(310, 36);
             txtCodigo.TabIndex = 2;
             txtCodigo.TabStop = false;
             txtCodigo.TextChanged += CodigoProduto_TextChanged;
@@ -247,45 +280,28 @@ namespace App_Cadastro
             // 
             txtValor.Cursor = Cursors.IBeam;
             txtValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtValor.Location = new Point(553, 433);
+            txtValor.Location = new Point(607, 455);
             txtValor.Multiline = true;
             txtValor.Name = "txtValor";
             txtValor.PlaceholderText = "Digite aqui...";
-            txtValor.Size = new Size(310, 30);
+            txtValor.Size = new Size(310, 36);
             txtValor.TabIndex = 1;
             txtValor.TabStop = false;
             txtValor.TextChanged += textBox1_TextChanged;
             // 
-            // button1
+            // pictureBox1
             // 
-            button1.BackColor = Color.White;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.FromArgb(0, 0, 64);
-            button1.Location = new Point(146, 329);
-            button1.Name = "button1";
-            button1.Size = new Size(175, 60);
-            button1.TabIndex = 10;
-            button1.Text = "Consultar \r\nEstoque\r\n";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.FlatStyle = FlatStyle.Flat;
-            label7.Font = new Font("MicrogrammaDBolExt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = SystemColors.ButtonHighlight;
-            label7.Location = new Point(58, 223);
-            label7.Name = "label7";
-            label7.Size = new Size(349, 62);
-            label7.TabIndex = 11;
-            label7.Text = "Deseja ver os produtos \r\njá cadastrados?";
-            label7.TextAlign = ContentAlignment.TopCenter;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(80, 175);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(295, 252);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
             // 
             // FormCadastro
             // 
-            ClientSize = new Size(924, 661);
+            ClientSize = new Size(1035, 707);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormCadastro";
@@ -294,6 +310,7 @@ namespace App_Cadastro
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
 
         }
@@ -389,7 +406,7 @@ namespace App_Cadastro
                     MessageBox.Show("Produto cadastrado com sucesso!");
                     LimparCampos();
 
-                }     
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao cadastrar: " + ex.Message);
@@ -411,6 +428,13 @@ namespace App_Cadastro
         private void MarcaProduto_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FormConsulta formConsulta = new FormConsulta();
+            formConsulta.Show();
+            this.Hide();
         }
     }
 }

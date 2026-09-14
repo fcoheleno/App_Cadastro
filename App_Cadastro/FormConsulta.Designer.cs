@@ -28,38 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsulta));
             panel1 = new Panel();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            voltarBtn = new Button();
             flpProdutos = new FlowLayoutPanel();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 0, 64);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(voltarBtn);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(335, 741);
+            panel1.Size = new Size(381, 740);
             panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(47, 127);
+            label1.Name = "label1";
+            label1.Size = new Size(304, 37);
+            label1.TabIndex = 1;
+            label1.Text = "Produtos cadastrados ";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(59, 206);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(269, 271);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // voltarBtn
+            // 
+            voltarBtn.BackColor = Color.White;
+            voltarBtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            voltarBtn.ForeColor = Color.FromArgb(0, 0, 64);
+            voltarBtn.Location = new Point(113, 559);
+            voltarBtn.Name = "voltarBtn";
+            voltarBtn.Size = new Size(151, 61);
+            voltarBtn.TabIndex = 0;
+            voltarBtn.Text = "Voltar";
+            voltarBtn.UseVisualStyleBackColor = false;
+            voltarBtn.Click += button1_Click;
             // 
             // flpProdutos
             // 
             flpProdutos.AutoScroll = true;
             flpProdutos.Dock = DockStyle.Fill;
             flpProdutos.FlowDirection = FlowDirection.TopDown;
-            flpProdutos.Location = new Point(335, 0);
+            flpProdutos.Location = new Point(381, 0);
             flpProdutos.Name = "flpProdutos";
-            flpProdutos.Size = new Size(814, 741);
+            flpProdutos.Size = new Size(634, 740);
             flpProdutos.TabIndex = 1;
+            flpProdutos.WrapContents = false;
             // 
             // FormConsulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1149, 741);
+            ClientSize = new Size(1015, 740);
             Controls.Add(flpProdutos);
             Controls.Add(panel1);
             Name = "FormConsulta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormConsulta";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -67,5 +116,8 @@
 
         private Panel panel1;
         private FlowLayoutPanel flpProdutos;
+        private Button voltarBtn;
+        private Label label1;
+        private PictureBox pictureBox1;
     }
 }
