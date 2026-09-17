@@ -11,7 +11,7 @@ namespace App_Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormCadastro formCadastro = new FormCadastro();
+            FormCadastro formCadastro = new FormCadastro(this);
             formCadastro.Show();
             this.Hide();
         }
@@ -23,7 +23,7 @@ namespace App_Cadastro
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            FormConsulta formConsulta = new FormConsulta();
+            FormConsulta formConsulta = new FormConsulta(this);
             formConsulta.Show();
             this.Hide();
         }

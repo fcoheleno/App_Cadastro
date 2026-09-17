@@ -54,11 +54,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("MicrogrammaDBolExt", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.Location = new Point(69, 477);
             label1.Name = "label1";
-            label1.Size = new Size(230, 41);
+            label1.Size = new Size(186, 37);
             label1.TabIndex = 1;
             label1.Text = "GeniusCad";
             // 
@@ -116,6 +116,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormInicial";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

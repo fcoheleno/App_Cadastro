@@ -11,12 +11,13 @@ namespace App_Cadastro
 {
     public partial class FormConsulta : Form
     {
-        private string connectionString = "User=SYSDBA;Password=helenin;Database=C:\\Bancos\\produtos.fdb;DataSource=localhost;Port=3050;Dialect=3;Charset=UTF8;";
 
-        public FormConsulta()
+        public Form formAnterior;
+        public FormConsulta(Form origem)
         {
             InitializeComponent();
             Carregarprodutos();
+            formAnterior = origem;
 
         }
 
@@ -24,26 +25,31 @@ namespace App_Cadastro
         {
 
             flpProdutos.Controls.Clear();
-            using (FbConnection conn = new FbConnection(connectionString))
+            using (FbConnection conn = new FbConnection(Conexao.ConnectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT CODIGO, NOME, MARCA, VALOR, QUANTIDADE FROM PRODUTOS";
+                    string query = "SELECT CODIGO, NOME, MARCA, VALOR, QUANTIDADE FROM PRODUTOS WHERE USUARIO_ID = @usuarioId";
 
                     using (FbCommand cmd = new FbCommand(query, conn))
-                    using (FbDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
-                        {
-                            string codigo = reader["CODIGO"].ToString();
-                            string nome = reader["NOME"].ToString();
-                            string marca = reader["MARCA"].ToString();
-                            decimal valor = Convert.ToDecimal(reader["VALOR"]);
-                            int quantidade = Convert.ToInt32(reader["QUANTIDADE"]);
+                        cmd.Parameters.AddWithValue("@usuarioId", UsuarioLogado.Id);
 
-                            Panel card = CriarCardProduto(codigo, nome, marca, valor, quantidade);
-                            flpProdutos.Controls.Add(card);
+                        using (FbDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string codigo = reader["CODIGO"].ToString();
+                                string nome = reader["NOME"].ToString();
+                                string marca = reader["MARCA"].ToString();
+                                decimal valor = Convert.ToDecimal(reader["VALOR"]);
+                                int quantidade = Convert.ToInt32(reader["QUANTIDADE"]);
+                                string labelTxtValor = valor.ToString("C2", new System.Globalization.CultureInfo("pt-BR"));
+
+                                Panel card = CriarCardProduto(codigo, nome, marca, valor, quantidade);
+                                flpProdutos.Controls.Add(card);
+                            }
                         }
                     }
                 }
@@ -76,15 +82,36 @@ namespace App_Cadastro
                 ForeColor = Color.FromArgb(0, 0, 64)
             };
 
+            Button btnEditar = new Button
+            {
+                Text = "Editar",
+                Dock = DockStyle.Right,
+                Width = 80
+            };
+
+            btnEditar.Click += (sender, e) => AbrirEdicao(codigo, nome, marca, valor, quantidade);
+
             card.Controls.Add(lbl);
+            card.Controls.Add(btnEditar);
             return card;
+        }
+
+        private void AbrirEdicao(string codigo, string nome, string marca, decimal valor, int quantidade)
+        {
+            FormCadastro formEdicao = new FormCadastro(this, codigo, nome, marca, valor, quantidade);
+            formEdicao.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 forminicial = new Form1();
-            forminicial.Show();
+            formAnterior.Show();
             this.Hide();
+        }
+
+        private void flpProdutos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
