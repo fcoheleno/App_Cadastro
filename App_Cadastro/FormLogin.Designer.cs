@@ -28,58 +28,195 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
-            btnVoltar = new Button();
+            label4 = new Label();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            btnBack = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
+            guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            btnLogar = new Guna.UI2.WinForms.Guna2Button();
+            txtNome = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSenhaUser = new Guna.UI2.WinForms.Guna2TextBox();
             linkCadastrar = new LinkLabel();
-            btnLogin = new Button();
             label3 = new Label();
             label2 = new Label();
-            senhaUsuario = new TextBox();
-            nomeUsuario = new TextBox();
             label1 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnVoltar);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(guna2PictureBox1);
+            panel1.Controls.Add(btnBack);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(321, 659);
+            panel1.Size = new Size(456, 746);
             panel1.TabIndex = 0;
             // 
-            // btnVoltar
+            // label4
             // 
-            btnVoltar.BackColor = Color.Navy;
-            btnVoltar.FlatStyle = FlatStyle.Popup;
-            btnVoltar.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVoltar.ForeColor = Color.White;
-            btnVoltar.Location = new Point(111, 452);
-            btnVoltar.Name = "btnVoltar";
-            btnVoltar.Size = new Size(133, 50);
-            btnVoltar.TabIndex = 0;
-            btnVoltar.Text = "Voltar";
-            btnVoltar.UseVisualStyleBackColor = false;
-            btnVoltar.Click += btnVoltar_Click;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Navy;
+            label4.Location = new Point(104, 143);
+            label4.Name = "label4";
+            label4.Size = new Size(236, 80);
+            label4.TabIndex = 10;
+            label4.Text = "Seja bem vindo \r\nde volta!!";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(45, 145);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.Size = new Size(372, 589);
+            guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2PictureBox1.TabIndex = 11;
+            guna2PictureBox1.TabStop = false;
+            // 
+            // btnBack
+            // 
+            btnBack.BorderRadius = 29;
+            btnBack.CustomizableEdges = customizableEdges3;
+            btnBack.DisabledState.BorderColor = Color.DarkGray;
+            btnBack.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBack.FillColor = Color.Navy;
+            btnBack.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.Location = new Point(24, 12);
+            btnBack.Name = "btnBack";
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnBack.Size = new Size(62, 56);
+            btnBack.TabIndex = 10;
+            btnBack.Click += btnVoltar_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Navy;
+            panel2.Controls.Add(guna2PictureBox2);
+            panel2.Controls.Add(btnLogar);
+            panel2.Controls.Add(txtNome);
+            panel2.Controls.Add(txtSenhaUser);
             panel2.Controls.Add(linkCadastrar);
-            panel2.Controls.Add(btnLogin);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(senhaUsuario);
-            panel2.Controls.Add(nomeUsuario);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(321, 0);
+            panel2.Location = new Point(456, 0);
+            panel2.Margin = new Padding(10);
             panel2.Name = "panel2";
-            panel2.Size = new Size(564, 659);
+            panel2.Size = new Size(732, 746);
             panel2.TabIndex = 1;
+            // 
+            // guna2PictureBox2
+            // 
+            guna2PictureBox2.CustomizableEdges = customizableEdges5;
+            guna2PictureBox2.FillColor = Color.Transparent;
+            guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
+            guna2PictureBox2.ImageRotate = 0F;
+            guna2PictureBox2.Location = new Point(262, 116);
+            guna2PictureBox2.Name = "guna2PictureBox2";
+            guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox2.Size = new Size(226, 177);
+            guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            guna2PictureBox2.TabIndex = 10;
+            guna2PictureBox2.TabStop = false;
+            // 
+            // btnLogar
+            // 
+            btnLogar.BorderRadius = 10;
+            btnLogar.CustomizableEdges = customizableEdges7;
+            btnLogar.DisabledState.BorderColor = Color.DarkGray;
+            btnLogar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogar.FillColor = Color.White;
+            btnLogar.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogar.ForeColor = Color.Navy;
+            btnLogar.Image = (Image)resources.GetObject("btnLogar.Image");
+            btnLogar.ImageOffset = new Point(40, 0);
+            btnLogar.Location = new Point(298, 540);
+            btnLogar.Name = "btnLogar";
+            btnLogar.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnLogar.Size = new Size(175, 56);
+            btnLogar.TabIndex = 9;
+            btnLogar.Text = "Logar";
+            btnLogar.TextOffset = new Point(-10, -2);
+            btnLogar.Click += btnLogar_Click_1;
+            // 
+            // txtNome
+            // 
+            txtNome.BorderRadius = 10;
+            txtNome.CustomizableEdges = customizableEdges9;
+            txtNome.DefaultText = "";
+            txtNome.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNome.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNome.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNome.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNome.IconLeft = (Image)resources.GetObject("txtNome.IconLeft");
+            txtNome.IconLeftOffset = new Point(10, 0);
+            txtNome.Location = new Point(192, 349);
+            txtNome.Margin = new Padding(4);
+            txtNome.Name = "txtNome";
+            txtNome.PlaceholderForeColor = SystemColors.ControlDark;
+            txtNome.PlaceholderText = " Digite o usuário...";
+            txtNome.SelectedText = "";
+            txtNome.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtNome.Size = new Size(360, 46);
+            txtNome.TabIndex = 8;
+            // 
+            // txtSenhaUser
+            // 
+            txtSenhaUser.BorderRadius = 10;
+            txtSenhaUser.CustomizableEdges = customizableEdges11;
+            txtSenhaUser.DefaultText = "";
+            txtSenhaUser.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSenhaUser.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSenhaUser.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSenhaUser.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSenhaUser.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSenhaUser.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSenhaUser.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSenhaUser.IconLeft = (Image)resources.GetObject("txtSenhaUser.IconLeft");
+            txtSenhaUser.IconLeftOffset = new Point(10, 0);
+            txtSenhaUser.Location = new Point(192, 453);
+            txtSenhaUser.Margin = new Padding(4);
+            txtSenhaUser.Name = "txtSenhaUser";
+            txtSenhaUser.PasswordChar = '●';
+            txtSenhaUser.PlaceholderForeColor = SystemColors.ControlDark;
+            txtSenhaUser.PlaceholderText = " Digite sua senha...";
+            txtSenhaUser.SelectedText = "";
+            txtSenhaUser.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtSenhaUser.Size = new Size(360, 46);
+            txtSenhaUser.TabIndex = 7;
             // 
             // linkCadastrar
             // 
@@ -91,7 +228,7 @@
             linkCadastrar.ForeColor = Color.White;
             linkCadastrar.LinkBehavior = LinkBehavior.NeverUnderline;
             linkCadastrar.LinkColor = Color.White;
-            linkCadastrar.Location = new Point(169, 529);
+            linkCadastrar.Location = new Point(282, 611);
             linkCadastrar.Name = "linkCadastrar";
             linkCadastrar.Size = new Size(221, 21);
             linkCadastrar.TabIndex = 6;
@@ -99,26 +236,12 @@
             linkCadastrar.Text = "Ainda não possui uma conta?";
             linkCadastrar.LinkClicked += linkCadastrar_LinkClicked;
             // 
-            // btnLogin
-            // 
-            btnLogin.BackColor = Color.White;
-            btnLogin.FlatStyle = FlatStyle.Popup;
-            btnLogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = Color.Navy;
-            btnLogin.Location = new Point(212, 452);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(133, 50);
-            btnLogin.TabIndex = 5;
-            btnLogin.Text = "Logar";
-            btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += btnLogin_Click;
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(119, 315);
+            label3.Location = new Point(201, 417);
             label3.Name = "label3";
             label3.Size = new Size(82, 32);
             label3.TabIndex = 4;
@@ -129,35 +252,18 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(110, 188);
+            label2.Location = new Point(211, 313);
             label2.Name = "label2";
             label2.Size = new Size(215, 32);
             label2.TabIndex = 3;
             label2.Text = "Nome do Usuário";
-            // 
-            // senhaUsuario
-            // 
-            senhaUsuario.Location = new Point(110, 359);
-            senhaUsuario.Multiline = true;
-            senhaUsuario.Name = "senhaUsuario";
-            senhaUsuario.Size = new Size(333, 41);
-            senhaUsuario.TabIndex = 2;
-            senhaUsuario.TextChanged += senhaUsuario_TextChanged;
-            // 
-            // nomeUsuario
-            // 
-            nomeUsuario.Location = new Point(110, 233);
-            nomeUsuario.Multiline = true;
-            nomeUsuario.Name = "nomeUsuario";
-            nomeUsuario.Size = new Size(333, 41);
-            nomeUsuario.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(251, 105);
+            label1.Location = new Point(332, 60);
             label1.Name = "label1";
             label1.Size = new Size(94, 40);
             label1.TabIndex = 0;
@@ -167,15 +273,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(885, 659);
+            ClientSize = new Size(1188, 746);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form2";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -185,11 +294,16 @@
         private Panel panel2;
         private Label label3;
         private Label label2;
-        private TextBox senhaUsuario;
-        private TextBox nomeUsuario;
         private Label label1;
         private LinkLabel linkCadastrar;
         private Button btnLogin;
         private Button btnVoltar;
+        private Guna.UI2.WinForms.Guna2TextBox txtNome;
+        private Guna.UI2.WinForms.Guna2TextBox txtSenhaUser;
+        private Guna.UI2.WinForms.Guna2Button btnLogar;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

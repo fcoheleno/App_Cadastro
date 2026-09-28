@@ -19,23 +19,19 @@ namespace App_Cadastro
             formAnterior = origem;
         }
 
-        private void nomeUser_TextChanged(object sender, EventArgs e)
+        private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
-        private void senhaUser_TextChanged(object sender, EventArgs e)
+        private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
-        private void emailUser_TextChanged(object sender, EventArgs e)
+        private void btnCriar_Click(object sender, EventArgs e)
         {
-            
-        }
-        private void btnCriarConta_Click(object sender, EventArgs e)
-        {
-            string nome = nomeUser.Text.Trim();
-            string senha = senhaUser.Text.Trim();
-            string email = emailUser.Text.Trim();
+            string nome = txtNome.Text.Trim();
+            string senha = txtSenhaUser.Text.Trim();
+            string email = txtEmail.Text.Trim();
 
             if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(senha) || string.IsNullOrEmpty(email))
             {
@@ -60,16 +56,26 @@ namespace App_Cadastro
                     }
                     MessageBox.Show("Usuário cadastrado com sucesso!");
                 }
-                    catch (Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("erro ao cadastrar: " + ex.Message);
                 }
-            } 
+            }
+        }
+
+        private void btnCriar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCriar.BackColor = Color.FromArgb(230, 230, 230);
+        }
+
+        private void btnCriar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCriar.BackColor = Color.White;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            
+
             formAnterior.Show();
             this.Close();
         }
@@ -79,6 +85,16 @@ namespace App_Cadastro
             FormLogin formLogin = new FormLogin(this);
             formLogin.Show();
             this.Hide();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSenhaUser_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

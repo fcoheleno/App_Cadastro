@@ -9,11 +9,9 @@ namespace App_Cadastro
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            FormCadastro formCadastro = new FormCadastro(this);
-            formCadastro.Show();
-            this.Hide();
+            AbrirCadastro();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +34,14 @@ namespace App_Cadastro
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AbrirCadastro() {
+
+            panelConteudo.Controls.Clear();
+            UcCadastro uc = new UcCadastro();
+            uc.Dock = DockStyle.Fill;
+            panelConteudo.Controls.Add(uc);
         }
     }
 }

@@ -32,15 +32,15 @@ namespace App_Cadastro
             this.Hide();
         }
 
-        private void senhaUsuario_TextChanged(object sender, EventArgs e)
+        private void txtSenhaUser_TextChanged(object sender, EventArgs e)
         {
-
+            txtSenhaUser.PasswordChar = '*';
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogar_Click(object sender, EventArgs e)
         {
-            string usuario = nomeUsuario.Text;
-            string senhaDigitada = senhaUsuario.Text;
+            string usuario = txtNome.Text;
+            string senhaDigitada = txtSenhaUser.Text;
 
             using (FbConnection conn = Conexao.AbrirConexao())
             {
@@ -58,10 +58,10 @@ namespace App_Cadastro
                             return;
                         }
 
-                        string senhaHashSalva = resultado.ToString();
+                        string? senhaHashSalva = resultado.ToString();
                         bool senhaCorreta = BCrypt.Net.BCrypt.Verify(senhaDigitada, senhaHashSalva);
 
-                        if (senhaCorreta = true)
+                        if (senhaCorreta == true)
                         {
                             string selectId = "SELECT ID FROM ADMINISTRADORES WHERE USUARIO = @usuario;";
                             using (FbCommand cmdId = new FbCommand(selectId, conn))
@@ -87,9 +87,14 @@ namespace App_Cadastro
                     MessageBox.Show("Erro:" + ex.Message);
                 }
 
-                }
-                
             }
+
+        }
+
+        private void btnLogar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
+}
 
