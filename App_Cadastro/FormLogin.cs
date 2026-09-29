@@ -46,7 +46,7 @@ namespace App_Cadastro
             {
                 try
                 {
-                    string query = "SELECT SENHA_HASH FROM ADMINISTRADORES WHERE USUARIO = @usuario;";
+                    string query = "SELECT SENHA_HASH FROM USUARIOS WHERE NOME_USER = @usuario;";
                     using (FbCommand cmd = new FbCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@usuario", usuario);
@@ -63,7 +63,7 @@ namespace App_Cadastro
 
                         if (senhaCorreta == true)
                         {
-                            string selectId = "SELECT ID FROM ADMINISTRADORES WHERE USUARIO = @usuario;";
+                            string selectId = "SELECT ID FROM USUARIOS WHERE NOME_USER = @usuario;";
                             using (FbCommand cmdId = new FbCommand(selectId, conn))
                             {
                                 cmdId.Parameters.AddWithValue("@usuario", usuario);

@@ -167,7 +167,7 @@
             btnLogar.TabIndex = 9;
             btnLogar.Text = "Logar";
             btnLogar.TextOffset = new Point(-10, -2);
-            btnLogar.Click += btnLogar_Click_1;
+            btnLogar.Click += btnLogar_Click;
             // 
             // txtNome
             // 
