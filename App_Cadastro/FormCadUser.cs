@@ -46,7 +46,7 @@ namespace App_Cadastro
                 try
                 {
                     conn.Open();
-                    string insertQuery = "INSERT INTO ADMINISTRADORES(USUARIO, EMAIL, SENHA_HASH) VALUES(@nome, @email, @senhaHash);";
+                    string insertQuery = "INSERT INTO ADMINISTRADORES(NOME_USER, EMAIL, SENHA_HASH) VALUES(@nome, @email, @senhaHash);";
                     using (FbCommand cmd = new FbCommand(insertQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@nome", nome);

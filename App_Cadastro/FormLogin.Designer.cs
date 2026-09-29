@@ -68,7 +68,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(456, 746);
+            panel1.Size = new Size(456, 845);
             panel1.TabIndex = 0;
             // 
             // label4
@@ -76,7 +76,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Navy;
-            label4.Location = new Point(104, 143);
+            label4.Location = new Point(104, 162);
             label4.Name = "label4";
             label4.Size = new Size(236, 80);
             label4.TabIndex = 10;
@@ -88,10 +88,10 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(45, 145);
+            guna2PictureBox1.Location = new Point(45, 164);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(372, 589);
+            guna2PictureBox1.Size = new Size(372, 668);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 11;
             guna2PictureBox1.TabStop = false;
@@ -108,10 +108,10 @@
             btnBack.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
             btnBack.Image = (Image)resources.GetObject("btnBack.Image");
-            btnBack.Location = new Point(24, 12);
+            btnBack.Location = new Point(24, 14);
             btnBack.Name = "btnBack";
             btnBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnBack.Size = new Size(62, 56);
+            btnBack.Size = new Size(62, 63);
             btnBack.TabIndex = 10;
             btnBack.Click += btnVoltar_Click;
             // 
@@ -128,9 +128,9 @@
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(456, 0);
-            panel2.Margin = new Padding(10);
+            panel2.Margin = new Padding(10, 11, 10, 11);
             panel2.Name = "panel2";
-            panel2.Size = new Size(732, 746);
+            panel2.Size = new Size(732, 845);
             panel2.TabIndex = 1;
             // 
             // guna2PictureBox2
@@ -139,10 +139,10 @@
             guna2PictureBox2.FillColor = Color.Transparent;
             guna2PictureBox2.Image = (Image)resources.GetObject("guna2PictureBox2.Image");
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(262, 116);
+            guna2PictureBox2.Location = new Point(262, 131);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2PictureBox2.Size = new Size(226, 177);
+            guna2PictureBox2.Size = new Size(226, 201);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox2.TabIndex = 10;
             guna2PictureBox2.TabStop = false;
@@ -160,10 +160,10 @@
             btnLogar.ForeColor = Color.Navy;
             btnLogar.Image = (Image)resources.GetObject("btnLogar.Image");
             btnLogar.ImageOffset = new Point(40, 0);
-            btnLogar.Location = new Point(298, 540);
+            btnLogar.Location = new Point(298, 612);
             btnLogar.Name = "btnLogar";
             btnLogar.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnLogar.Size = new Size(175, 56);
+            btnLogar.Size = new Size(175, 63);
             btnLogar.TabIndex = 9;
             btnLogar.Text = "Logar";
             btnLogar.TextOffset = new Point(-10, -2);
@@ -183,14 +183,14 @@
             txtNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtNome.IconLeft = (Image)resources.GetObject("txtNome.IconLeft");
             txtNome.IconLeftOffset = new Point(10, 0);
-            txtNome.Location = new Point(192, 349);
-            txtNome.Margin = new Padding(4);
+            txtNome.Location = new Point(192, 396);
+            txtNome.Margin = new Padding(4, 5, 4, 5);
             txtNome.Name = "txtNome";
             txtNome.PlaceholderForeColor = SystemColors.ControlDark;
             txtNome.PlaceholderText = " Digite o usuário...";
             txtNome.SelectedText = "";
             txtNome.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtNome.Size = new Size(360, 46);
+            txtNome.Size = new Size(360, 52);
             txtNome.TabIndex = 8;
             // 
             // txtSenhaUser
@@ -207,16 +207,17 @@
             txtSenhaUser.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSenhaUser.IconLeft = (Image)resources.GetObject("txtSenhaUser.IconLeft");
             txtSenhaUser.IconLeftOffset = new Point(10, 0);
-            txtSenhaUser.Location = new Point(192, 453);
-            txtSenhaUser.Margin = new Padding(4);
+            txtSenhaUser.Location = new Point(192, 513);
+            txtSenhaUser.Margin = new Padding(4, 5, 4, 5);
             txtSenhaUser.Name = "txtSenhaUser";
             txtSenhaUser.PasswordChar = '●';
             txtSenhaUser.PlaceholderForeColor = SystemColors.ControlDark;
             txtSenhaUser.PlaceholderText = " Digite sua senha...";
             txtSenhaUser.SelectedText = "";
             txtSenhaUser.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtSenhaUser.Size = new Size(360, 46);
+            txtSenhaUser.Size = new Size(360, 52);
             txtSenhaUser.TabIndex = 7;
+            txtSenhaUser.TextChanged += txtSenhaUser_TextChanged_1;
             // 
             // linkCadastrar
             // 
@@ -228,7 +229,7 @@
             linkCadastrar.ForeColor = Color.White;
             linkCadastrar.LinkBehavior = LinkBehavior.NeverUnderline;
             linkCadastrar.LinkColor = Color.White;
-            linkCadastrar.Location = new Point(282, 611);
+            linkCadastrar.Location = new Point(282, 692);
             linkCadastrar.Name = "linkCadastrar";
             linkCadastrar.Size = new Size(221, 21);
             linkCadastrar.TabIndex = 6;
@@ -241,7 +242,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(201, 417);
+            label3.Location = new Point(201, 473);
             label3.Name = "label3";
             label3.Size = new Size(82, 32);
             label3.TabIndex = 4;
@@ -252,7 +253,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(211, 313);
+            label2.Location = new Point(211, 355);
             label2.Name = "label2";
             label2.Size = new Size(215, 32);
             label2.TabIndex = 3;
@@ -263,7 +264,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(332, 60);
+            label1.Location = new Point(332, 68);
             label1.Name = "label1";
             label1.Size = new Size(94, 40);
             label1.TabIndex = 0;
@@ -271,9 +272,9 @@
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1188, 746);
+            ClientSize = new Size(1188, 845);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "FormLogin";

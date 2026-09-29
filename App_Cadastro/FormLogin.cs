@@ -95,6 +95,11 @@ namespace App_Cadastro
         {
 
         }
+
+        private void txtSenhaUser_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
