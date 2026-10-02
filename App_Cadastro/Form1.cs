@@ -19,11 +19,12 @@ namespace App_Cadastro
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void AbrirConsulta(object sender, EventArgs e)
         {
-            FormConsulta formConsulta = new FormConsulta(this);
-            formConsulta.Show();
-            this.Hide();
+            panelConteudo.Controls.Clear();
+            UcConsultarDados cd = new UcConsultarDados();
+            cd.Dock = DockStyle.Fill;
+            panelConteudo.Controls.Add(cd);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -36,12 +37,20 @@ namespace App_Cadastro
 
         }
 
-        private void AbrirCadastro() {
+        private void AbrirCadastro()
+        {
 
             panelConteudo.Controls.Clear();
             UcCadastro uc = new UcCadastro();
             uc.Dock = DockStyle.Fill;
             panelConteudo.Controls.Add(uc);
         }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }
