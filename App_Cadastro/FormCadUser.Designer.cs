@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadUser));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -40,10 +43,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadUser));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
+            perfil = new Guna.UI2.WinForms.Guna2PictureBox();
             txtSenhaUser = new Guna.UI2.WinForms.Guna2TextBox();
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             txtNome = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,10 +57,9 @@
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             label5 = new Label();
             btnVoltar = new Guna.UI2.WinForms.Guna2Button();
-            perfil = new Guna.UI2.WinForms.Guna2PictureBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)perfil).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -80,6 +80,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(759, 802);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // perfil
+            // 
+            perfil.BackColor = Color.Transparent;
+            perfil.CustomizableEdges = customizableEdges1;
+            perfil.FillColor = Color.Transparent;
+            perfil.Image = (Image)resources.GetObject("perfil.Image");
+            perfil.ImageRotate = 0F;
+            perfil.Location = new Point(262, 101);
+            perfil.Name = "perfil";
+            perfil.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            perfil.Size = new Size(239, 154);
+            perfil.SizeMode = PictureBoxSizeMode.Zoom;
+            perfil.TabIndex = 13;
+            perfil.TabStop = false;
             // 
             // txtSenhaUser
             // 
@@ -99,7 +115,7 @@
             txtSenhaUser.Location = new Point(171, 546);
             txtSenhaUser.Margin = new Padding(4);
             txtSenhaUser.Name = "txtSenhaUser";
-            txtSenhaUser.PasswordChar = '*';
+            txtSenhaUser.PasswordChar = '●';
             txtSenhaUser.PlaceholderForeColor = Color.Gray;
             txtSenhaUser.PlaceholderText = " Digite sua senha...";
             txtSenhaUser.SelectedText = "";
@@ -110,6 +126,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.AcceptsTab = true;
             txtEmail.BorderRadius = 10;
             txtEmail.CustomizableEdges = customizableEdges5;
             txtEmail.DefaultText = "";
@@ -135,6 +152,7 @@
             // 
             // txtNome
             // 
+            txtNome.AcceptsTab = true;
             txtNome.BorderRadius = 10;
             txtNome.CustomizableEdges = customizableEdges7;
             txtNome.DefaultText = "";
@@ -287,21 +305,6 @@
             btnVoltar.TabIndex = 13;
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // perfil
-            // 
-            perfil.BackColor = Color.Transparent;
-            perfil.CustomizableEdges = customizableEdges1;
-            perfil.FillColor = Color.Transparent;
-            perfil.Image = (Image)resources.GetObject("perfil.Image");
-            perfil.ImageRotate = 0F;
-            perfil.Location = new Point(262, 101);
-            perfil.Name = "perfil";
-            perfil.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            perfil.Size = new Size(239, 154);
-            perfil.SizeMode = PictureBoxSizeMode.Zoom;
-            perfil.TabIndex = 13;
-            perfil.TabStop = false;
-            // 
             // FormCadUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -316,8 +319,8 @@
             Text = "Form2";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)perfil).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

@@ -59,7 +59,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1241, 814);
+            panel2.Size = new Size(1241, 718);
             panel2.TabIndex = 2;
             // 
             // panelConteudo
@@ -74,7 +74,7 @@
             panelConteudo.Location = new Point(238, 0);
             panelConteudo.Name = "panelConteudo";
             panelConteudo.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            panelConteudo.Size = new Size(1001, 812);
+            panelConteudo.Size = new Size(1001, 716);
             panelConteudo.TabIndex = 6;
             // 
             // guna2HtmlLabel4
@@ -82,7 +82,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel4.ForeColor = SystemColors.ControlDarkDark;
-            guna2HtmlLabel4.Location = new Point(37, 355);
+            guna2HtmlLabel4.Location = new Point(37, 313);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(166, 32);
             guna2HtmlLabel4.TabIndex = 3;
@@ -93,7 +93,7 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel3.ForeColor = SystemColors.ControlDarkDark;
-            guna2HtmlLabel3.Location = new Point(37, 324);
+            guna2HtmlLabel3.Location = new Point(37, 286);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(319, 32);
             guna2HtmlLabel3.TabIndex = 2;
@@ -104,7 +104,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = SystemColors.ControlDarkDark;
-            guna2HtmlLabel2.Location = new Point(37, 294);
+            guna2HtmlLabel2.Location = new Point(37, 259);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(158, 32);
             guna2HtmlLabel2.TabIndex = 1;
@@ -115,7 +115,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = SystemColors.ControlDarkDark;
-            guna2HtmlLabel1.Location = new Point(37, 231);
+            guna2HtmlLabel1.Location = new Point(37, 204);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(206, 39);
             guna2HtmlLabel1.TabIndex = 0;
@@ -123,7 +123,7 @@
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.FromArgb(0, 0, 64);
+            panelMenu.BackColor = Color.Navy;
             panelMenu.Controls.Add(guna2Button2);
             panelMenu.Controls.Add(guna2Button1);
             panelMenu.Controls.Add(btnSair);
@@ -134,7 +134,7 @@
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
             panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            panelMenu.Size = new Size(238, 812);
+            panelMenu.Size = new Size(238, 716);
             panelMenu.TabIndex = 5;
             panelMenu.Paint += panelMenu_Paint;
             // 
@@ -160,8 +160,8 @@
             guna2Button2.ImageOffset = new Point(-60, 0);
             guna2Button2.ImageSize = new Size(40, 40);
             guna2Button2.IndicateFocus = true;
-            guna2Button2.Location = new Point(14, 216);
-            guna2Button2.Margin = new Padding(20);
+            guna2Button2.Location = new Point(14, 191);
+            guna2Button2.Margin = new Padding(20, 18, 20, 18);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.PressedColor = Color.Snow;
             guna2Button2.ShadowDecoration.Color = Color.White;
@@ -169,7 +169,7 @@
             customizableEdges4.TopLeft = false;
             customizableEdges4.TopRight = false;
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button2.Size = new Size(204, 65);
+            guna2Button2.Size = new Size(204, 57);
             guna2Button2.TabIndex = 7;
             guna2Button2.Text = "Vendas";
             guna2Button2.TextAlign = HorizontalAlignment.Left;
@@ -198,8 +198,8 @@
             guna2Button1.ImageOffset = new Point(-60, 0);
             guna2Button1.ImageSize = new Size(40, 40);
             guna2Button1.IndicateFocus = true;
-            guna2Button1.Location = new Point(14, 288);
-            guna2Button1.Margin = new Padding(20);
+            guna2Button1.Location = new Point(14, 254);
+            guna2Button1.Margin = new Padding(20, 18, 20, 18);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.PressedColor = Color.Snow;
             guna2Button1.ShadowDecoration.Color = Color.White;
@@ -207,7 +207,7 @@
             customizableEdges6.TopLeft = false;
             customizableEdges6.TopRight = false;
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(204, 65);
+            guna2Button1.Size = new Size(204, 57);
             guna2Button1.TabIndex = 6;
             guna2Button1.Text = "Conta";
             guna2Button1.TextAlign = HorizontalAlignment.Left;
@@ -236,8 +236,8 @@
             btnSair.ImageOffset = new Point(-60, 0);
             btnSair.ImageSize = new Size(40, 40);
             btnSair.IndicateFocus = true;
-            btnSair.Location = new Point(14, 359);
-            btnSair.Margin = new Padding(20);
+            btnSair.Location = new Point(14, 317);
+            btnSair.Margin = new Padding(20, 18, 20, 18);
             btnSair.Name = "btnSair";
             btnSair.PressedColor = Color.Snow;
             btnSair.ShadowDecoration.Color = Color.White;
@@ -245,12 +245,13 @@
             customizableEdges8.TopLeft = false;
             customizableEdges8.TopRight = false;
             btnSair.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSair.Size = new Size(204, 65);
+            btnSair.Size = new Size(204, 57);
             btnSair.TabIndex = 2;
             btnSair.Text = "Sair";
             btnSair.TextAlign = HorizontalAlignment.Left;
             btnSair.TextOffset = new Point(70, 0);
             btnSair.UseTransparentBackground = true;
+            btnSair.Click += btnSair_Click;
             // 
             // btnConsul
             // 
@@ -274,8 +275,8 @@
             btnConsul.ImageOffset = new Point(-60, 0);
             btnConsul.ImageSize = new Size(40, 40);
             btnConsul.IndicateFocus = true;
-            btnConsul.Location = new Point(14, 145);
-            btnConsul.Margin = new Padding(20);
+            btnConsul.Location = new Point(14, 128);
+            btnConsul.Margin = new Padding(20, 18, 20, 18);
             btnConsul.Name = "btnConsul";
             btnConsul.PressedColor = Color.Snow;
             btnConsul.ShadowDecoration.Color = Color.White;
@@ -283,7 +284,7 @@
             customizableEdges10.TopLeft = false;
             customizableEdges10.TopRight = false;
             btnConsul.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnConsul.Size = new Size(204, 65);
+            btnConsul.Size = new Size(204, 57);
             btnConsul.TabIndex = 1;
             btnConsul.Text = "Consultar ";
             btnConsul.TextAlign = HorizontalAlignment.Left;
@@ -313,8 +314,8 @@
             btnCad.ImageOffset = new Point(-60, 0);
             btnCad.ImageSize = new Size(40, 40);
             btnCad.IndicateFocus = true;
-            btnCad.Location = new Point(14, 73);
-            btnCad.Margin = new Padding(20);
+            btnCad.Location = new Point(14, 64);
+            btnCad.Margin = new Padding(20, 18, 20, 18);
             btnCad.Name = "btnCad";
             btnCad.PressedColor = Color.Snow;
             btnCad.ShadowDecoration.Color = Color.White;
@@ -322,7 +323,7 @@
             customizableEdges12.TopLeft = false;
             customizableEdges12.TopRight = false;
             btnCad.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnCad.Size = new Size(204, 65);
+            btnCad.Size = new Size(204, 57);
             btnCad.TabIndex = 0;
             btnCad.Text = "Cadastrar";
             btnCad.TextAlign = HorizontalAlignment.Left;
@@ -332,9 +333,9 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1241, 814);
+            ClientSize = new Size(1241, 718);
             Controls.Add(panel2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;

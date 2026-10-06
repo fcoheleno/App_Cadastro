@@ -17,6 +17,7 @@ namespace App_Cadastro
         {
             InitializeComponent();
             formAnterior = origem;
+            txtNome.KeyDown += Campo_KeyDown;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -32,10 +33,6 @@ namespace App_Cadastro
             this.Hide();
         }
 
-        private void txtSenhaUser_TextChanged(object sender, EventArgs e)
-        {
-            txtSenhaUser.PasswordChar = '*';
-        }
 
         private void btnLogar_Click(object sender, EventArgs e)
         {
@@ -91,12 +88,39 @@ namespace App_Cadastro
 
         }
 
-        private void btnLogar_Click_1(object sender, EventArgs e)
+
+
+        private void txtSenhaUser_TextChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtSenhaUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnLogar.PerformClick();
+            }
+
+        }
+
+        private void btnLogar_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
 
-        private void txtSenhaUser_TextChanged_1(object sender, EventArgs e)
+        private void Campo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                this.SelectNextControl((Control)sender, true, true, true, true);
+            }
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
         {
 
         }

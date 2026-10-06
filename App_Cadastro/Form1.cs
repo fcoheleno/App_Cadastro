@@ -51,6 +51,12 @@ namespace App_Cadastro
 
         }
 
-        
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            FormInicial form = new FormInicial();
+            form.Show();
+            UsuarioLogado.Logout();
+            this.Close();
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace App_Cadastro
         public UcConsultarDados()
         {
             InitializeComponent();
-            ConfigurarColunas();
+            /*ConfigurarColunas();*/
             CarregarProdutos();
         }
 

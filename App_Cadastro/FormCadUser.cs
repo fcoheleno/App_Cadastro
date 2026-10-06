@@ -94,6 +94,20 @@ namespace App_Cadastro
 
         private void txtSenhaUser_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtSenhaUser_Keydown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnCriar.PerformClick();
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
